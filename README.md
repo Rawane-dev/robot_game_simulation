@@ -8,7 +8,7 @@ It uses **ROS1 (Kinetic)**, **Gazebo 7**, **MoveIt**, **OpenCV**, and a simulate
 
 ## 🎥 Demo
 
-> <img src="video/video.mp4" align="middle"> 
+> <img src="video/video.gif" align="middle"> 
 
 ## 🛠️ Installation
 
