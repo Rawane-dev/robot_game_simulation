@@ -1,0 +1,39 @@
+version qui marche bien pour avancer le robot vers la table
+
+#!/usr/bin/env python
+# -*- coding: utf-8
+
+import rospy
+from geometry_msgs.msg import Twist
+
+def move_forward():
+    rospy.init_node('fetch_move_forward')
+    pub = rospy.Publisher('/base_controller/command', Twist, queue_size=10)
+    rospy.sleep(1.0)  # Attendre que le publisher se connecte
+
+    # Message de mouvement
+    move_cmd = Twist()
+    move_cmd.linear.x = 0.4  # vitesse en m/s
+    move_cmd.angular.z = 0.0
+
+    duration = 6  # secondes (0.2 m/s * 2.5 s = 0.5 m)
+
+    rate = rospy.Rate(10)
+    ticks = int(duration * 10)
+
+    rospy.loginfo("Avancer de 0.5 mètre...")
+    for _ in range(ticks):
+        pub.publish(move_cmd)
+        rate.sleep()
+
+    # Arrêter le robot
+    move_cmd.linear.x = 0.0
+    pub.publish(move_cmd)
+    rospy.loginfo("Arrêté.")
+
+if __name__ == '__main__':
+    try:
+        move_forward()
+    except rospy.ROSInterruptException:
+        pass
+
