@@ -1,4 +1,4 @@
-# 🤖 Connect 4 Robot Simulation (Gazebo + ROS + AI)
+# 🤖 Connect 4 Robot Simulation (Robotics + AI)
 
 This project is a 3D simulation of a robot playing the Connect 4 game autonomously using artificial intelligence.
 
