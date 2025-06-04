@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<robot name="bloc_cubes">
+  <link name="bloc_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://my_game/meshes/cube1.dae" scale="1 1 1"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0 0 1 1"/>
+      </material>
+    </visual>
+
+    <collision>
+      <geometry>
+        <mesh filename="package://my_game/meshes/cube1.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    
+    <inertial>
+      <mass value="0.1"/>
+      <inertia
+        ixx="0.0002" ixy="0.0"  ixz="0.0"
+        iyy="0.0002" iyz="0.0" izz="0.0002"/>
+    </inertial>
+  </link>
+
+  <gazebo>
+    <static>true</static>
+  </gazebo> 
+</robot>
+

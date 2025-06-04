@@ -1,0 +1,32 @@
+controller_list:
+  - name: "arm_with_torso_controller"
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - torso_lift_joint
+      - shoulder_pan_joint
+      - shoulder_lift_joint
+      - upperarm_roll_joint
+      - elbow_flex_joint
+      - forearm_roll_joint
+      - wrist_flex_joint
+      - wrist_roll_joint
+
+  - name: "head_controller"
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    joints:
+      - head_pan_joint
+      - head_tilt_joint
+
+  - name: "gripper_controller"
+    action_ns: gripper_action
+    type: GripperCommand
+    joints:
+      - l_gripper_finger_joint
+      - r_gripper_finger_joint
+
+  - name: "torso_controller"
+    joints:
+      - torso_lift_joint

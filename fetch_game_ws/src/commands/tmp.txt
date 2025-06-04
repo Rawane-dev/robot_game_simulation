@@ -1,0 +1,75 @@
+cd /tmp
+gedit fetch_pose_library.yaml
+
+ detection_pose:
+  base_position: {x: 0.6172348035130217, y: -0.0364033428823403}
+  elbow_flex_joint: -1.9998241048960441
+  forearm_roll_joint: 0.0005156442234595104
+  head_pan_joint: -0.00924666290147691
+  head_tilt_joint: 0.002663754671050178
+  shoulder_lift_joint: 1.1001022790256512
+  shoulder_pan_joint: -1.0001860650868162
+  torso_lift_joint: -6.444086586568902e-08
+  upperarm_roll_joint: 0.00034714354334308695
+  wrist_flex_joint: 0.5999142476100259
+  wrist_roll_joint: -0.00017713730289781182
+hito_droite_pose:
+  base_position: {x: 0.6563332486011701, y: -0.006945201810721843}
+  elbow_flex_joint: -0.8636515438096009
+  forearm_roll_joint: 1.5149817874386233
+  head_pan_joint: -0.0047924782211197225
+  head_tilt_joint: 0.0021208156555667657
+  shoulder_lift_joint: -0.016909803458391437
+  shoulder_pan_joint: -1.0338856292070986
+  torso_lift_joint: 0.38615025906664463
+  upperarm_roll_joint: -0.6911911809238918
+  wrist_flex_joint: 0.7332814231597267
+  wrist_roll_joint: -0.46901989583790105
+hito_gauche_pose:
+  base_position: {x: 0.6232283250878479, y: 0.0011464194992861164}
+  elbow_flex_joint: -0.8315890749256578
+  forearm_roll_joint: 0.4560210992312861
+  head_pan_joint: -0.00045287768495860803
+  head_tilt_joint: 0.001909078941066511
+  shoulder_lift_joint: -0.41694725629450247
+  shoulder_pan_joint: 0.4610749819595297
+  torso_lift_joint: 0.3860309085599936
+  upperarm_roll_joint: -1.7214374855862422
+  wrist_flex_joint: 1.301593457933988
+  wrist_roll_joint: 1.3924259621622381
+hito_pose:
+  base_position: {x: 0.6573550637321115, y: -0.006514482397652269}
+  elbow_flex_joint: -1.7971386627284538
+  forearm_roll_joint: 0.2605936802868154
+  head_pan_joint: -0.0027603855294202617
+  head_tilt_joint: 0.0021292342764018812
+  shoulder_lift_joint: 0.11559317133119862
+  shoulder_pan_joint: -0.5038866748995536
+  torso_lift_joint: 0.386149998287314
+  upperarm_roll_joint: -0.8302979395180952
+  wrist_flex_joint: 1.3501247782790218
+  wrist_roll_joint: 0.8002773220669068
+lift_torso_pose:
+  base_position: {x: 0.6360850362591108, y: 0.002613032482749386}
+  elbow_flex_joint: -1.9999876988376242
+  forearm_roll_joint: -0.00019183780700249287
+  head_pan_joint: -0.0011944364627849424
+  head_tilt_joint: 0.002457196775186965
+  shoulder_lift_joint: 1.099963767862472
+  shoulder_pan_joint: -2.8012720155956572e-05
+  torso_lift_joint: 0.386150010542032
+  upperarm_roll_joint: -3.0487218766417357e-05
+  wrist_flex_joint: 0.5999720537145565
+  wrist_roll_joint: 0.00026238039376824673
+pregrasp_pose:
+  base_position: {x: 0.67130672019665, y: -0.029676251460288024}
+  elbow_flex_joint: -1.9999770847428593
+  forearm_roll_joint: 0.0002984130472167834
+  head_pan_joint: 0.00020028262760174442
+  head_tilt_joint: 0.0024797633965025767
+  shoulder_lift_joint: 1.1001208145424668
+  shoulder_pan_joint: -6.23972541262674e-05
+  torso_lift_joint: 6.076233843954423e-11
+  upperarm_roll_joint: 5.790407804262543e-05
+  wrist_flex_joint: 0.6001267506113894
+  wrist_roll_joint: -4.5130345908361846e-05

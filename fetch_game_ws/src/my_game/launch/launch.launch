@@ -1,0 +1,27 @@
+<launch>
+
+  <!-- Load world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find my_game)/worlds/my_world.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+  </include>
+
+  <!-- Load Fetch robot -->
+  <param name="robot_description" command="$(find xacro)/xacro '$(find my_fetch_config)/robots/fetch.urdf'" />
+  <node name="fetch_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen" />
+
+  <!-- Load Disc robot under a namespace -->
+  <group ns="disc">
+    <param name="robot_description" command="$(find xacro)/xacro '$(find my_fetch_config)/robots/disc.urdf'" />
+    <node name="disc_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen" />
+  </group>
+
+  <!-- Static transform from fetch to disc -->
+  <node pkg="tf" type="static_transform_publisher" name="disc_to_fetch_tf"
+        args="1 0 0 0 0 0 base_link disc 100" />
+
+  <!-- RViz -->
+  <node name="rviz" pkg="rviz" type="rviz" />
+
+</launch>

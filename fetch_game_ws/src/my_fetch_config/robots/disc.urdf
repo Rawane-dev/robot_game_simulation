@@ -1,0 +1,16 @@
+<robot name="fetch">
+  <link name="base_link"/>
+  <link name="disc">
+    <visual>
+      <geometry>
+        <mesh filename="package://my_disc_visual/meshes/disc_game.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="disc_to_world" type="fixed">
+    <parent link="base_link"/>
+    <child link="disc"/>
+    <origin xyz="1 0 0" rpy="0 0 0"/>
+  </joint>
+</robot>

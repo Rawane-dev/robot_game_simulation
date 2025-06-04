@@ -1,0 +1,2 @@
+fetch_controller:my_disc_visual:my_fetch_config:my_game:myfetch_moveit_config
+-DCATKIN_DEVEL_PREFIX=/home/rawane/fetch_game_ws/devel -DCMAKE_INSTALL_PREFIX=/home/rawane/fetch_game_ws/install -G Unix Makefiles

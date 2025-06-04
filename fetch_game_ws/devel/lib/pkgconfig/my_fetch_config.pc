@@ -1,0 +1,8 @@
+prefix=/home/rawane/fetch_game_ws/devel
+
+Name: my_fetch_config
+Description: Description of my_fetch_config
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

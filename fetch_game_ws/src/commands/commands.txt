@@ -1,0 +1,13 @@
+ roscore
+source ~/fetch_game_ws/devel/setup.bash
+roslaunch my_game my_game.launch
+roslaunch fetch_moveit_config move_group.launch
+source ~/fetch_game_ws/devel/setup.bash
+rosrun my_game arm_init.py
+rosrun my_game lower_head.py
+rosrun my_game capture_image.py
+rosrun my_game click_coordinates.py
+rosrun my_game game_ai.py
+
+
+

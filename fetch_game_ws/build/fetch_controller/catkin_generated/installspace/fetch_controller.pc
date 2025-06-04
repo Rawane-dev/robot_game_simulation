@@ -1,0 +1,8 @@
+prefix=/home/rawane/fetch_game_ws/install
+
+Name: fetch_controller
+Description: Description of fetch_controller
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

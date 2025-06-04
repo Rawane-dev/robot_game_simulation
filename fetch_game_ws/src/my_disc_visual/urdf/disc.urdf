@@ -1,0 +1,22 @@
+<robot name="disc_model">
+  <link name="disc">
+    <visual>
+      <geometry>
+        <mesh filename="package://my_disc_visual/meshes/disc.dae" scale="1 1 1"/>
+      </geometry>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="package://my_disc_visual/meshes/disc.dae" scale="1 1 1"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1.0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia 
+          ixx="0.001" ixy="0.0" ixz="0.0" 
+          iyy="0.001" iyz="0.0" 
+          izz="0.001"/>
+    </inertial>
+  </link>
+</robot>

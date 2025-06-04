@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="Board">
+    <static>true</static> <!-- Changed to true since the board shouldn't move -->
+
+    <link name="grille_link">
+      <pose>0 0 0 0 0 0</pose>
+
+      <!-- Visual part using the mesh -->
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://Board/meshes/cube1.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+
+      <!-- Collision using the same mesh -->
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://Board/meshes/cube1.dae</uri>
+          </mesh>
+        </geometry>
+        <surface>
+         
+          <bounce>
+            <restitution_coefficient>0.0</restitution_coefficient>
+            <threshold>1000000.0</threshold>
+          </bounce>
+          <contact>
+            <ode>
+              <kp>100000.0</kp>
+              <kd>1.0</kd>
+              <min_depth>0.001</min_depth>
+              <max_vel>0.01</max_vel>
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+
+    </link>
+  </model>
+</sdf>

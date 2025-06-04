@@ -1,0 +1,52 @@
+planner_configs:
+  RRT:
+    type: geometric::RRT
+    range: 0.0
+    goal_bias: 0.05
+  RRTConnect:
+    type: geometric::RRTConnect
+    range: 0.0
+  PRM:
+    type: geometric::PRM
+    max_nearest_neighbors: 10
+
+arm:
+  default_planner_config: RRTConnect
+  planner_configs:
+    - RRT
+    - RRTConnect
+    - PRM
+  projection_evaluator: joints(shoulder_pan_joint,shoulder_lift_joint)
+  longest_valid_segment_fraction: 0.005
+
+gripper:
+  default_planner_config: RRTConnect
+  planner_configs:
+    - RRT
+    - RRTConnect
+    - PRM
+  projection_evaluator: joints(l_gripper_finger_joint,r_gripper_finger_joint)
+  longest_valid_segment_fraction: 0.005
+
+torso:
+  default_planner_config: RRTConnect
+  planner_configs:
+    - RRT
+    - RRTConnect
+    - PRM
+
+head:
+  default_planner_config: RRTConnect
+  planner_configs:
+    - RRT
+    - RRTConnect
+    - PRM
+  projection_evaluator: joints(head_pan_joint,head_tilt_joint)
+  longest_valid_segment_fraction: 0.005
+
+arm_with_torso:
+  default_planner_config: RRTConnect
+  planner_configs:
+    - RRT
+    - RRTConnect
+    - PRM

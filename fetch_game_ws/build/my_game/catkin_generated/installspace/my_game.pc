@@ -1,0 +1,8 @@
+prefix=/home/rawane/fetch_game_ws/install
+
+Name: my_game
+Description: Description of my_game
+Version: 0.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

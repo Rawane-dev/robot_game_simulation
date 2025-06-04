@@ -1,0 +1,23 @@
+<launch>
+  <arg name="robot"    default="fetch"/>
+  <arg name="debug"    default="false"/>
+  <arg name="gui"      default="true"/>
+  <arg name="headless" default="false"/>
+
+  <!-- 1) Empty world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+   <arg name="world_name" value="$(find my_game)/worlds/newworld.world"/>
+    <arg name="debug"        value="$(arg debug)"/>
+    <arg name="gui"          value="$(arg gui)"/>
+    <arg name="paused"       value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="headless"     value="$(arg headless)"/>
+  </include>
+
+  <!-- 2) Fetch robot -->
+  <include file="$(find fetch_gazebo)/launch/include/$(arg robot).launch.xml"/>
+
+  <!-- 3) Préparation du robot (contrôleurs, position, etc.) -->
+  <node name="prepare_robot_manual" pkg="fetch_gazebo" type="prepare_simulated_robot.py" output="screen" />
+
+</launch>

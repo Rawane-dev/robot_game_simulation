@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+
+    <!-- Le sol -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- La lumière -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Tu peux ajouter ici tes objets plus tard -->
+
+  </world>
+</sdf>
+
